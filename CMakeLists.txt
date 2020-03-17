@@ -11,6 +11,7 @@ find_package(Threads REQUIRED)
 
 add_executable(demo main.cpp thread_pool.hpp)
 
+target_compile_options(demo PRIVATE -Wall)
 target_link_libraries(demo PRIVATE Threads::Threads)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
